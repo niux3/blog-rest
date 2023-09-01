@@ -19,7 +19,7 @@
         <article data-id="{row.id}">
             <a href="/#/article/{row.id}-{row.slug}">
                 <h2>{row.title}&nbsp;<small>{row.created}</small></h2>
-                <img src="https://placehold.it/850x350" alt="" class="thumbnail">
+                <img src={row.illustration} alt="" class="thumbnail">
                 <p>{row.content.substr(0, 200)}...</p>
             </a>
             <div class="callout">

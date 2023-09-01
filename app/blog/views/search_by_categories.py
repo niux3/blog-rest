@@ -11,6 +11,7 @@ class SearchByCategories(Resource):
                 'title': row.title,
                 'slug': row.slug,
                 'content': row.content,
+                'illustration': row.illustration,
                 'author': User.query.get(row.authors).username,
                 'categories': str(Category.query.get(row.categories)),
                 'created': row.created.strftime("%d/%m/%Y")

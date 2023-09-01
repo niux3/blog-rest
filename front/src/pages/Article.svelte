@@ -45,7 +45,7 @@
     <p>Chargement...</p>
 {:then row}
     <article>
-        <img src="https://placehold.it/850x350" alt="" class="thumbnail">
+        <img src={row.illustration} alt="" class="thumbnail">
         <h2>{row.title}</h2>
         <p><small> <a href={"/#/categorie/1-" + row.categorie}>#{row.categorie}</a></small> - <small>créé le <i>{row.created}</i></small> par <small><strong>{row.author}</strong></small></p>
         <div>{@html row.content}</div>

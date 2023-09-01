@@ -52,6 +52,7 @@ connect.commit()
 rows_posts = [
     {
         'title': "Qui était Django Reinhardt",
+        'illustration': 'https://bassistepro.com/wp-content/uploads/2023/06/django-reinhardt-3-1024x576.jpg',
         'content': """
 Jean Reinhardt, plus connu sous le nom de Django Reinhardt, est un guitariste de jazz français né le 23 janvier 1910 à Liberchies1 — aujourd'hui une section de la commune de Pont-à-Celles — dans l'arrondissement de Charleroi en Belgique2,3 et mort le 16 mai 1953 à Fontainebleau4. Son style de jeu et de composition a été suivi d'adeptes, donnant naissance à un style de jazz à part entière, le jazz manouche.
 
@@ -68,6 +69,7 @@ Plusieurs de ses descendants sont devenus guitaristes : Lousson Reinhardt, son f
     },
     {
         'title': "Miles Davis, ce génie",
+        'illustration': 'https://www.rollingstone.fr/wp-content/uploads/2019/09/miles-davis.jpg',
         'content': """
 Miles Dewey Davis III, généralement dit Miles Davis /maɪlz ˈdju.i ˈdeɪ.vɪs ðə θɝd/1, né le 26 mai 1926 à Alton (Illinois), et mort le 28 septembre 1991 à Santa Monica (Californie), est un compositeur et trompettiste de jazz américain.
 
@@ -84,6 +86,7 @@ Les différentes formations de Miles Davis sont comme des laboratoires au sein d
     },
     {
         'title': "B. B. King",
+        'illustration': 'https://www.lamusiqueestatoutlemonde.com/wp-content/uploads/2015/09/king.jpg',
         'content': """
 B.B. King (pour Blues Boy), de son vrai nom Riley B. King, né le 16 septembre 1925 à Itta Bena, dans le Mississippi aux États-Unis, et mort le 14 mai 2015 à Las Vegas, est un guitariste, compositeur et chanteur de blues américain. Il est considéré comme l'un des meilleurs musiciens de blues, et a eu une influence considérable sur de nombreux guitaristes.
 
@@ -98,6 +101,7 @@ Il est, avec Albert King et Freddie King, un des trois « kings » de la guitare
     },
     {
         'title': "Massive Attack",
+        'illustration': 'https://media.senscritique.com/media/000004822253/1200x600/massive_attack.jpg',
         'content': """
 Massive Attack est un groupe musical britannique formé en 1988, originaire de Bristol, précurseur de la musique trip hop. Il se compose, à l'origine, de Robert Del Naja (3D), Adrian Thaws (Tricky), Grant Marshall (Daddy G) et Andrew Vowles (Mushroom). Le style du groupe est en constante évolution : au début proche du hip-hop, du groove, voire de la soul, il aborde par la suite la musique électronique, et un son plus électrique à la fin des années 1990. Chaque album est enrichi par de très nombreuses collaborations et la participation systématique de Horace Andy.
 
@@ -114,6 +118,7 @@ Le groupe sort cinq albums studio, de 1991 à 2010, ainsi que plusieurs albums r
     },
     {
         'title': "Portishead",
+        'illustration': 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Beth_Gibbons_-_Portishead.jpg',
         'content': """
 Le groupe se forme en 1991, lorsque Geoff Barrow rencontre la chanteuse Beth Gibbons. Ils forment un duo et choisissent pour nom celui de la ville côtière dans laquelle a grandi Geoff Barrow : Portishead dans le Somerset, à 20 kilomètres à l'ouest de Bristol1. Ils enregistrent leurs premiers titres aidés par le guitariste Adrian Utley, venu du jazz, et d'un ingénieur du son, Dave McDonald.
 
@@ -130,6 +135,7 @@ Utley devient un membre à part entière, participant à l'écriture et à la pr
     },
     {
         'title': "Archive",
+        'illustration': 'https://i0.wp.com/www.sensationrock.net/wp-content/uploads/2016/09/Archive.jpg?fit=800%2C400&ssl=1',
         'content': """
 Archive est formé en 1994 comme groupe de trip hop sous l'impulsion de Darius Keeler et Danny Griffiths aux côtés de Roya Arab et du rappeur Rosko John2. Après avoir publié quelques singles sous leur propre label, ils se séparent au début de 1996.
 
@@ -144,6 +150,7 @@ Quelques mois plus tard, le groupe se reforme avec du nouveau personnel. Le prem
     },
     {
         'title': "Chick Corea",
+        'illustration': 'https://www.jazzradio.fr/media/news/thumb/1110x624_61dfeec9e4fdd-2e4dee9e-4915-463c-bf74-0bb4f917b6e5.jpeg',
         'content': """
 Chick Corea (nom de scène d'Armando Anthony Corea), né le 12 juin 1941 à Chelsea (Massachusetts) et mort le 9 février 2021 à Tampa Bay (Floride)1, est un pianiste, claviériste et compositeur américain de jazz et jazz fusion.
 
@@ -160,6 +167,7 @@ C'est également un excellent pianiste classique, même s'il n'a enregistré que
     },
     {
         'title': "Herbie Hancock",
+        'illustration': 'https://bassistepro.com/wp-content/uploads/2023/05/biographie-herbie-hancock-2-1024x576.jpg',
         'content': """
 Herbert Hancock, dit Herbie, est un pianiste claviériste et compositeur américain de jazz, né le 12 avril 1940 à Chicago dans l'Illinois. Il est l'un des musiciens de jazz les plus importants et influents de sa génération, en mêlant au jazz, notamment, des éléments de soul, de funk, de rock et de disco.
 
@@ -176,6 +184,7 @@ Il est aussi acteur, on l'a vu dans des films tels que Autour de minuit, Hitters
     },
     {
         'title': "Albert King",
+        'illustration': 'https://i.ytimg.com/vi/9L0lcUhL-Wc/maxresdefault.jpg',
         'content': """
 lbert Nelson est né dans une famille modeste à Indianola dans le Mississippi près d'une plantation de coton où il travaille pendant sa jeunesse. Ses premières influences musicales lui viennent de son père, Will Nelson, qui joue de la guitare. Pendant son enfance, il chante également à l'église dans un groupe de gospel. Il commence sa carrière professionnelle avec un groupe appelé In the Groove Boys à Osceola dans l'Arkansas.
 
@@ -190,6 +199,7 @@ Son premier succès est la chanson I'm A Lonely Man sortie en 1959. Il doit cepe
     },
     {
         'title': "John Lee Hooker",
+        'illustration': 'https://upload.wikimedia.org/wikipedia/commons/7/74/JohnLeeHooker1997.jpg',
         'content': """
 John Lee Hooker, né le 22 août 1917 à Clarksdale (Mississippi, États-Unis), et mort le 21 juin 2001 à Los Altos (Californie, États-Unis), est un guitariste et chanteur de blues américain. Son style, unique et authentique à la fois, en a fait l'un des artistes les plus importants de cette musique, et son influence sur le blues rock et le rock durant tout le XXe siècle est considérable.
 
@@ -206,6 +216,7 @@ John Lee Hooker entre au Rock and Roll Hall of Fame en 19911.
     },
     {
         'title': "Charlie Parker",
+        'illustration': 'https://img.over-blog-kiwi.com/0/99/90/99/20200726/ob_cefd14_charlie-parker.jpg',
         'content': """
 Charlie Parker (Charles Christopher Parker, Jr.)1 surnommé Bird (l'oiseau) ou Yardbird2, né le 29 août 1920 à Kansas City et mort le 12 mars 1955 à New York3, est un saxophoniste alto emblématique du jazz américain. Il est l'un des fondateurs du style bebop. Avec entre autres Louis Armstrong, Duke Ellington et Miles Davis, il est considéré comme un des jazzmen les plus influents de l'histoire du jazz.
 

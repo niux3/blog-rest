@@ -18,6 +18,7 @@ class Posts(Resource):
                 'content': row.content,
                 'author': User.query.get(row.authors).username,
                 'categories': str(Category.query.get(row.categories)),
+                'illustration': row.illustration,
                 'created': row.created.strftime("%d/%m/%Y")
             } for row in posts]
         } , 200

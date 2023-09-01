@@ -12,6 +12,7 @@ class Post(db.Model):
     created = db.Column(db.DateTime, default=datetime.utcnow)
     updated = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.now)
     online = db.Column(db.Boolean)
+    illustration = db.Column(db.String(255), default='https://placehold.it/850x350')
 
     categories = db.Column(db.Integer, db.ForeignKey('blog_categories.id'))
     authors = db.Column(db.Integer, db.ForeignKey('account_users.id'))

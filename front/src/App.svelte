@@ -29,7 +29,7 @@
 <main>
     <Header />
     <div class="grid-container">
-        <div class="grid-x grid-maring-x">
+        <div class="grid-x grid-margin-x">
             <div class="medium-9 cell">
                 <svelte:component this={component} />
             </div>
