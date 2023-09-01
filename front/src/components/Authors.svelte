@@ -12,7 +12,7 @@
     {:then data}
         {#each data as row}
             {#if row.username !== 'visiteur'}
-                <li><a href="/">{row.firstname} {row.lastname}</a></li>
+                <li><a href="/#/auteurs/{row.id}-{row.slug}">{row.firstname} {row.lastname}</a></li>
             {/if}
         {/each}
     {/await}

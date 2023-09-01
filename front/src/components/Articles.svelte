@@ -25,7 +25,7 @@
             <div class="callout">
                 <ul class="menu simple">
                     <li><a href="/">Auteur: {row.author}</a></li>
-                    <li><a href="/">Comments: 3</a></li>
+                    <li><a href="/">Commentaire{row.comments.length > 1? 's' : ''}: {row.comments.length}</a></li>
                 </ul>
             </div>
         </article>

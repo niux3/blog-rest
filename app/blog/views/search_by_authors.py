@@ -1,9 +1,9 @@
 from flask_restful import Resource
-from app.blog.models import Post, Category, Comment
+from app.blog.models import Post, Comment, Category
 from app.account.models import User
 
 
-class SearchByCategories(Resource):
+class SearchByAuthors(Resource):
     def get(self, id):
         posts = [
             {
@@ -21,11 +21,11 @@ class SearchByCategories(Resource):
                         'created': row_c.created.strftime('%d/%m/%Y'),
                         'author': str(User.query.get(row_c.authors).username)
                     }
-                    for row_c in Comment.query.filter(Comment.online==True, Comment.posts==row.id)
+                    for row_c in Comment.query.filter(Comment.online == True, Comment.posts == row.id)
                 ],
                 'created': row.created.strftime("%d/%m/%Y")
             }
-            for row in Post.query.filter(Post.categories==id)
+            for row in Post.query.filter(Post.authors == id)
         ]
         return {
             'posts': posts

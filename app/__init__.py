@@ -10,6 +10,7 @@ from app.blog.views import (
     Categories,
     Post as PostShow,
     SearchByCategories,
+    SearchByAuthors,
     Comments
 )
 
@@ -34,6 +35,7 @@ def create_app():
     api.add_resource(PostShow, '/post/<int:id>', endpoint='post')
     api.add_resource(Categories, '/categories', endpoint='categories')
     api.add_resource(SearchByCategories, '/search-categories/<int:id>', endpoint='search_categories')
+    api.add_resource(SearchByAuthors, '/search-authors/<int:id>', endpoint='search_authors')
     api.add_resource(Users, '/users', endpoint='users')
     api.add_resource(Comments, '/comments', endpoint='comments')
 

@@ -36,7 +36,9 @@
         fetch('//localhost:8000/comments', params).then(resp =>{
             if(resp.ok === true)
                 return resp.json()
-        }).then(d => console.table(d))
+        }).then(d =>{
+            $form.reset()
+        })
     }
 
 </script>
@@ -50,6 +52,21 @@
         <p><small> <a href={"/#/categorie/1-" + row.categorie}>#{row.categorie}</a></small> - <small>créé le <i>{row.created}</i></small> par <small><strong>{row.author}</strong></small></p>
         <div>{@html row.content}</div>
     </article>
+    <!--
+    <aside>
+        <ul>
+            {#await comments}
+                <li>Chargement...</li>
+            {:then comments_rows}
+                {#each comments_rows as c_row}
+                    <li>
+                        <p><strong><small></small></strong></p>
+                    </li>
+                {/each}
+            {/await}
+        </ul>
+    </aside>
+    -->
     <form on:submit|preventDefault={onSubmit} method="post">
         <input type="hidden" name="posts" value={row.id}>
         <fieldset class="fieldset">
