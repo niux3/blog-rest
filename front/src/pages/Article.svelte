@@ -38,6 +38,13 @@
                 return resp.json()
         }).then(d =>{
             $form.reset()
+            data = (async ()=>{
+                let full_url = window.location.hash,
+                    end_url = full_url.substring(full_url.lastIndexOf('/') + 1),
+                    [all, id, ...others] = [...end_url.matchAll(/^(\d+)-/g)].pop()
+                let resp = await fetch(`//localhost:8000/post/${id}`)
+                return await resp.json()
+            })()
         })
     }
 
@@ -52,21 +59,20 @@
         <p><small> <a href={"/#/categorie/1-" + row.categorie}>#{row.categorie}</a></small> - <small>créé le <i>{row.created}</i></small> par <small><strong>{row.author}</strong></small></p>
         <div>{@html row.content}</div>
     </article>
-    <!--
-    <aside>
-        <ul>
-            {#await comments}
-                <li>Chargement...</li>
-            {:then comments_rows}
-                {#each comments_rows as c_row}
+    {#if row.comments.length > 0}
+        <aside>
+            <h3>les commentaires de l'article : {row.title}</h3>
+            <ul>
+                {#each row.comments as comment}
                     <li>
-                        <p><strong><small></small></strong></p>
+                        {#if comment.title !== ''}<h4>{comment.title}</h4>{/if}
+                        <p>créé le <small>{comment.created}</small> par <strong><small>{comment.author}</small></strong></p>
+                        <div>{@html comment.content}</div>
                     </li>
                 {/each}
-            {/await}
-        </ul>
-    </aside>
-    -->
+            </ul>
+        </aside>
+    {/if}
     <form on:submit|preventDefault={onSubmit} method="post">
         <input type="hidden" name="posts" value={row.id}>
         <fieldset class="fieldset">
