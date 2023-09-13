@@ -1,3 +1,4 @@
+import hashlib
 from datetime import datetime
 from slugify import slugify
 from sqlalchemy import create_engine, MetaData, Table
@@ -19,6 +20,9 @@ rows_authors = [
         'lastname': 'Dupont',
         'username': 'Renaud D.',
         'email': 'dom@dom.com',
+        "created": datetime.now(),
+        "updated": datetime.now(),
+        "password": hashlib.md5("admin".encode('utf-8')).hexdigest(),
         'slug': 'renaud-dupont'
     },
     {
@@ -26,6 +30,9 @@ rows_authors = [
         'lastname': 'Martin',
         'username': 'Christophe M.',
         'email': 'dom@ddd.com',
+        "created": datetime.now(),
+        "updated": datetime.now(),
+        "password": hashlib.md5("admin".encode('utf-8')).hexdigest(),
         'slug': 'christophe-martin'
     },
     {
@@ -33,6 +40,9 @@ rows_authors = [
         'lastname': 'Durant',
         'username': 'visiteur',
         'email': 'dom@domdom.com',
+        "created": datetime.now(),
+        "updated": datetime.now(),
+        "password": hashlib.md5("123456".encode('utf-8')).hexdigest(),
         'slug': 'claude-durant'
     },
 ]
