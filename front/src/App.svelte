@@ -2,6 +2,7 @@
     import {onMount} from 'svelte'
     import Categories from './components/Categories.svelte'
     import Authors from './components/Authors.svelte'
+    import User from './components/User.svelte'
     import Header from './components/commons/Header.svelte'
     import routes from './routes'
 
@@ -37,6 +38,7 @@
                 <div class="sticky">
                     <Categories />
                     <Authors />
+                    <User />
                 </div>
             </div>
         </div>

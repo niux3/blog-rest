@@ -17,6 +17,8 @@ flask-migrate = "*"
 python-dotenv = "*"
 sqlalchemy = "*"
 markdown = "*"
+flask-wtf = "*"
+wtforms = "*"
 
 [dev-packages]
 

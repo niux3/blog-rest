@@ -11,7 +11,6 @@ class Comments(Resource):
             new_comment = Comment(**request.get_json())
             db.session.add(new_comment)
             db.session.commit()
-            # print(type(request.get_json()))
             return {
                 "message": "ok"
             }, 201

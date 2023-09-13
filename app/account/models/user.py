@@ -20,7 +20,7 @@ class User(db.Model):
     comments = db.relationship('Comment', backref='account_users')
 
     def __init__(self, *args, **kwargs):
-        super(Post, self).__init__(*args, **kwargs)
+        super(User, self).__init__(*args, **kwargs)
         self.generate_slug()
         self.generate_password()
 
@@ -33,7 +33,8 @@ class User(db.Model):
     def generate_slug(self):
         self.slug = ''
         if self.lastname:
-            self.slug = slugify(f'{self.id}-{self.lastname}')
+            tpl = f'{self.firstname}-{self.lastname}' if self.firstname != '' else f'{self.lastname}'
+            self.slug = slugify(tpl)
 
     def generate_password(self):
         self.password = hashlib.md5(self.password.encode('utf-8')).hexdigest()
