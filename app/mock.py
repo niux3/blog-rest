@@ -22,7 +22,7 @@ rows_authors = [
         'email': 'dom@dom.com',
         "created": datetime.now(),
         "updated": datetime.now(),
-        "password": hashlib.md5("admin".encode('utf-8')).hexdigest(),
+        "password": hashlib.md5((Config.SALT + "admin").encode('utf-8')).hexdigest(),
         'slug': 'renaud-dupont'
     },
     {
@@ -32,7 +32,7 @@ rows_authors = [
         'email': 'dom@ddd.com',
         "created": datetime.now(),
         "updated": datetime.now(),
-        "password": hashlib.md5("admin".encode('utf-8')).hexdigest(),
+        "password": hashlib.md5((Config.SALT + "admin").encode('utf-8')).hexdigest(),
         'slug': 'christophe-martin'
     },
     {
@@ -42,7 +42,7 @@ rows_authors = [
         'email': 'dom@domdom.com',
         "created": datetime.now(),
         "updated": datetime.now(),
-        "password": hashlib.md5("123456".encode('utf-8')).hexdigest(),
+        "password": hashlib.md5((Config.SALT + "123456").encode('utf-8')).hexdigest(),
         'slug': 'claude-durant'
     },
 ]

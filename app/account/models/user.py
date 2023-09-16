@@ -1,6 +1,7 @@
 import hashlib
 from datetime import datetime
 from slugify import slugify
+from app.config import Config
 from app.db import db
 
 
@@ -37,5 +38,6 @@ class User(db.Model):
             self.slug = slugify(tpl)
 
     def generate_password(self):
-        self.password = hashlib.md5(self.password.encode('utf-8')).hexdigest()
+        password = Config.SALT + self.password
+        self.password = hashlib.md5(password.encode('utf-8')).hexdigest()
 

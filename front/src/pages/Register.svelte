@@ -86,14 +86,11 @@
 </form>
 
 
-<style lang="scss">
+<style>
     label{
         margin-bottom: 1rem;
     }
     input{
         margin-bottom: 0;
-    }
-    input + span{
-        color: orangered;
     }
 </style>

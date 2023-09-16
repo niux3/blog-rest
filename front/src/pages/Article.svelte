@@ -1,4 +1,7 @@
 <script>
+    import {authenticated} from '../store.js'
+
+
     let data = (async ()=>{
         let full_url = window.location.hash,
             end_url = full_url.substring(full_url.lastIndexOf('/') + 1),
@@ -12,6 +15,9 @@
         return await resp.json()
     })()
 
+    let auth = {}
+    authenticated.subscribe(o => auth = o)
+
     let onSubmit = e =>{
         let headers = new Headers({
                 "X-Requested-With": "XMLHttpRequest",
@@ -22,6 +28,7 @@
             object = {},
             formData = new FormData($form)
         formData.forEach((value, key) => object[key] = value)
+        object['authors'] = auth.id
 
         let params = {
             method: $form.method,
@@ -73,24 +80,11 @@
             </ul>
         </aside>
     {/if}
+    {#if auth.logged === true}
     <form on:submit|preventDefault={onSubmit} method="post">
         <input type="hidden" name="posts" value={row.id}>
         <fieldset class="fieldset">
             <legend>Laisser un commentaire</legend>
-            <div class="input select">
-                <label>
-                    <span>sélectionner utilisateur</span>
-                    <select required name="authors">
-                        <option value=''>Choisir un utilisateur</option>
-                        {#await users}
-                            {:then row_users}
-                                {#each row_users as user}
-                                    <option value={user.id}>{user.firstname} {user.lastname}</option>
-                                {/each}
-                            {/await}
-                    </select>
-                </label>
-            </div>
             <div class="input text">
                 <label>
                     <span>title</span>
@@ -108,6 +102,7 @@
             </div>
         </fieldset>
     </form>
+    {/if}
 {/await}
 
 <style>
